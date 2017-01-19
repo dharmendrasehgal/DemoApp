@@ -1,0 +1,13 @@
+<section class="col3Component">
+	<h1>Learning</h1>
+	<article class="col-lg-4" *ngFor="let data of rawData | slice:1">
+		<div class="thumb">
+			<a href="{{data.imgHref}}" title=""><img class="img-responsive" src="./assets/images/{{data.imgSrc}}" alt="" /></a>
+		</div>
+		<div class="article-content">
+			<h3>{{data.title}}</h3>
+			<p class="desc">{{data.desc}}</p>
+		</div>
+		<div class="featureAction"><a href="#" class=""><span>{{data.action}}</span></a></div>
+	</article>
+</section>

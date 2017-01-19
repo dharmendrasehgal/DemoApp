@@ -1,0 +1,35 @@
+.featureList{
+	margin: 1em auto;
+	display: -webkit-inline-box;
+	li{margin-bottom:1em;}
+	a{
+		background: red;
+		padding: 5px 16px;
+		border-radius: 3px;
+		color: #fff;
+		position: relative;
+		z-index:1;
+		&:before{
+			content: "";
+			height: 100%;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: .4em;
+			z-index: 0;
+			-webkit-transition: width .25s cubic-bezier(.86,0,.07,1);
+			transition: width .25s cubic-bezier(.86,0,.07,1);
+			background: #b9002d;
+			z-index:2;
+		}
+		&:hover:before{
+			width: 100%;
+		}
+		&:hover span{
+			z-index:3;
+			position: relative;
+		}
+	}
+
+}
