@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { rawData} from '../../assets/data/rawData';
+
+import { Data} from '../../assets/data/data';
+import { DataServiceService} from '../data-service.service';
 
 @Component({
   selector: 'app-col4-component',
@@ -7,10 +9,12 @@ import { rawData} from '../../assets/data/rawData';
   styleUrls: ['./col4-component.component.scss']
 })
 export class Col4ComponentComponent implements OnInit {
-rawData=rawData;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+	rawData:Data[];
+	constructor(private dataService: DataServiceService) { }
+	getrawData(): void{
+		this.dataService.getrawData().then(rawData => this.rawData = rawData);
+	}
+	ngOnInit(): void {
+		this.getrawData();
+	}
 }

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { Data} from '../assets/data/data';
+import { DataServiceService} from './data-service.service';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
@@ -32,7 +35,7 @@ import { Col4ComponentComponent } from './col4-component/col4-component.componen
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

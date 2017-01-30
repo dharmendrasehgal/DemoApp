@@ -1,6 +1,5 @@
-export class rawData {
-    
-    id:string;
+export class Data {
+    id:number;
     action: string;
     imgSrc:string;
     imgHref: string;

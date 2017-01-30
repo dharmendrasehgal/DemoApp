@@ -1,4 +1,5 @@
-export const rawData = [
+import { Data} from './data';
+export const rawData: Data[] = [
 	{
 		id:1, 
 		action:'Data', 
